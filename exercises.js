@@ -8,10 +8,10 @@
 var doubleArray = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
+    result.push(arr[i] * 2); 
   }
-  return result
-}
+  return result;
+};
 
 /* #sumArrays
  *
@@ -21,7 +21,17 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+var sumArrays = function(arr1,arr2){
+ var sum1 = arr1.reduce(function (a, b) {
+  return a + b;
+}, 0);
+
+var sum2 = arr2.reduce(function (a, b) {
+  return a + b;
+}, 0);
+
+return sum1 + sum2;
+};
 
 /* #stringCount
  *
@@ -379,8 +389,8 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
   stringCount: null,
   arrayLength: null,
   countAll: null,
@@ -419,4 +429,4 @@ module.exports = {
   charCountMap: null,
   frequencyMap: null,
   tupleConvertToObject: null
-}
+};
