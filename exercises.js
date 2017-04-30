@@ -22,13 +22,13 @@ var doubleArray = function(arr) {
  * @return {Bool}
  */
 var sumArrays = function(arr1,arr2){
- var sum1 = arr1.reduce(function (a, b) {
+  var sum1 = arr1.reduce(function (a, b) {
   return a + b;
-}, 0);
+  }, 0);
 
-var sum2 = arr2.reduce(function (a, b) {
+  var sum2 = arr2.reduce(function (a, b) {
   return a + b;
-}, 0);
+  }, 0);
 
 return sum1 + sum2;
 };
@@ -40,7 +40,9 @@ return sum1 + sum2;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(string){
+    return string.length;
+};
 
 /* #arrayLength
  *
@@ -49,7 +51,9 @@ var stringCount;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr){
+  return arr.length;
+};
 
 /* #countAll
  *
@@ -58,7 +62,12 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr){
+  var sum = arr.reduce(function (a, b) {
+  return a + b;
+  }, 0);
+  return sum;
+};
 
 /* #countStrings
  *
@@ -391,9 +400,9 @@ var tupleConvertToObject;
 module.exports = {
   doubleArray: doubleArray,
   sumArrays: sumArrays, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
   countStrings: null,
   countAllStrings: null,
   convertToArray: null,
